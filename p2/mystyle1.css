@@ -1,0 +1,264 @@
+@font-face {
+    font-family: 'moderat';
+    src: url(fonts/modrat/moderat.eot);
+    src: url(fonts/modrat/moderat.eot?#iefix) format('embedded-opentype'),      
+        url(fonts/modrat/moderat.woff) format('woff'),
+        url(fonts/modrat/moderat.ttf) format('truetype'),
+        url(fonts/modrat/moderat.svg#Overseer) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'reckless';
+    src: url(fonts/reckless/RecklessNeue.eot);
+    src: url(fonts/reckless/RecklessNeue.eot?#iefix) format('embedded-opentype'),      
+        url(fonts/reckless/RecklessNeue.woff) format('woff'),
+        url(fonts/reckless/RecklessNeue.ttf) format('truetype'),
+        url(fonts/reckless/RecklessNeue.svg#Overseer) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'moderat', 'Arial', sans-serif;
+}
+
+p {
+    font-family: 'reckless', serif;
+    font-weight: 500;
+}
+
+li {
+    font-family: 'reckless', serif;
+    font-weight: 500;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: url('background.png') center center fixed;
+    background-size: cover;
+    padding: 40px 20px;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: -1;
+}
+*/
+
+.grid-contents {
+    max-width: 2000px;
+    margin: 0 auto;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+    gap: 20px; /* Adds space between grid items */
+}
+
+.grid-contents {
+    white-space: nowrap;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+
+}
+
+
+
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #222;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+section {
+    
+    min-width: 300px;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) inset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 1.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+section:hover {
+    transform: translateY(-6px);
+    /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+section p:hover {
+    color: #3d3d3d;
+    transform: translateY(-1px);
+    transition: color 1.3s ease-in-out, transform 0.1s ease;
+}
+
+section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    font-weight: 700;
+    
+}
+
+section h3 {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+section p, section li {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    text-wrap: wrap;
+    transition: color 1.3s ease-in-out, transform 0.3s ease;
+    
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Contact information styles */
+.contact-info {
+    line-height: 2;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #2c3e50;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+    transition: font-size 1s ease;
+    margin: 0 2px;
+}
+
+.contact-link[href^="https://linkedin"] {
+    color: #0077b5;  /* LinkedIn blue */
+}
+
+.contact-link[href^="https://otis"] {
+    color: #FF453A; /* Web Red */
+}
+
+.contact-link[href^="mailto"] {
+    color: #0A84FF;  /* Email blue */
+}
+
+.contact-link[href^="tel"] {
+    color: #34a853;  /* Phone green */
+}
+
+.contact-link:hover {
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+.contact-icon {
+    vertical-align: middle;
+    margin-right: 4px;
+    padding-left: 30px;
+    width: max-content;
+    height: 12px;
+    translate: 0px 0px;
+}
+
+
+@media (max-width: 768px) {
+    /* Styles for mobile devices */
+    body {
+        padding: 20px 10px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+
+
+
+
+.main {
+	width: 10000px;
+	position: fixed; 
+	height: 5000px;
+	left: 0;  
+	> div {
+		float: left;
+		display: block;
+		position: relative;
+		height: 100%;
+	}
+}
+
+#box1 { 
+	left: 0; 
+	height: 50%;  
+}
+
+
+
+#box1 span { width: 800px; }
+
+p > span { background: #D91E18; }
+p:nth-child(2n) > span { background: #26A65B; }
+p:nth-child(3n) > span { background: #F5D76E; } 
+p:nth-child(4n) > span { background: #4183D7; } 

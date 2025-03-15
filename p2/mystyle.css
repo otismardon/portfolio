@@ -1,0 +1,41 @@
+/* External CSS file (mystyle.css) */
+@font-face {
+    font-family: 'Favorit'; /*a name to be used later*/
+    src: url('ABCF/ABCFavorit-Bold.otf'); /*URL to font*/
+}
+h1 {
+    color: green;
+    font-size: 24px;
+    font-family: 'Favorit', Arial, sans-serif;
+}
+
+h2 {
+    color: green;
+    font-size: 24px;
+    font-family: 'Favorit', Arial, sans-serif;
+}
+
+h3 {
+    color: green;
+    font-size: 24px;
+    font-family: 'Favorit', Arial, sans-serif;
+}
+
+p {
+    color: green;
+    font-size: 24px;
+    font-family: 'Favorit', Arial, sans-serif;
+}
+
+li {
+    color: green;
+    font-size: 24px;
+    font-family: 'Favorit', Arial, sans-serif;
+}
+
+img {
+    width: 150px;
+    background-color: #7b5f5f;
+    padding: 10px;
+    border-radius: 10px;
+}

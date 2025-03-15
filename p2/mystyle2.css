@@ -1,0 +1,255 @@
+
+
+@font-face {
+    font-family: 'moderat';
+    src: url(fonts/modrat/moderat.eot);
+    src: url(fonts/modrat/moderat.eot?#iefix) format('embedded-opentype'),      
+        url(fonts/modrat/moderat.woff) format('woff'),
+        url(fonts/modrat/moderat.ttf) format('truetype'),
+        url(fonts/modrat/moderat.svg#Overseer) format('svg');
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+/* Inter font setup */
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+
+/* CSS */
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+/* end of inter font setup */
+
+
+@font-face {
+    font-family: 'reckless';
+    src: url(fonts/reckless/RecklessNeue.eot);
+    src: url(fonts/reckless/RecklessNeue.eot?#iefix) format('embedded-opentype'),      
+        url(fonts/reckless/RecklessNeue.woff) format('woff'),
+        url(fonts/reckless/RecklessNeue.ttf) format('truetype'),
+        url(fonts/reckless/RecklessNeue.svg#Overseer) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', 'Arial', sans-serif;
+}
+
+/* Semi-transparent overlay for better text readability */
+body::before {
+    content: '';
+    position: fixed;               /* Fixed position covers entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);  /* White overlay with 90% opacity */
+    z-index: -1;                  /* Places overlay behind content */
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: url('background.png') center center fixed;
+    background-size: cover;
+    padding: 40px 20px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.headImage {
+    height: 200px;
+    position: fixed;
+    overflow: hidden;
+
+}
+
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 30px;
+    padding-bottom: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    max-height: 160px;
+    min-height: 120px;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #222;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #555;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+section {
+    
+
+    
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) inset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 1.3s ease;
+    flex: 1 1  calc(40%);
+    
+    
+}
+
+section:hover {
+    transform: translateY(-6px);
+    /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+section p:hover {
+    color: #3d3d3d;
+    transform: translateY(-1px);
+    transition: color 1.3s ease-in-out, transform 0.1s ease;
+}
+
+section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    font-weight: 700;
+    
+}
+
+section h3 {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+section p, section li {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    transition: color 1.3s ease-in-out, transform 0.3s ease;
+    
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Contact information styles */
+.contact-info {
+    line-height: 2;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #2c3e50;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+    transition: font-size 1s ease;
+    margin: 0 2px;
+}
+
+.contact-link[href^="https://linkedin"] {
+    color: #0077b5;  /* LinkedIn blue */
+}
+
+.contact-link[href^="https://otis"] {
+    color: #FF453A; /* Web Red */
+}
+
+.contact-link[href^="mailto"] {
+    color: #0A84FF;  /* Email blue */
+}
+
+.contact-link[href^="tel"] {
+    color: #34a853;  /* Phone green */
+}
+
+.contact-link:hover {
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+.contact-icon {
+    vertical-align: middle;
+    margin-right: 4px;
+    padding-left: 30px;
+    width: max-content;
+    height: 12px;
+    translate: 0px 0px;
+}
+
+
+@media (max-width: 768px) {
+    /* Styles for mobile devices */
+    body {
+        padding: 20px 10px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
